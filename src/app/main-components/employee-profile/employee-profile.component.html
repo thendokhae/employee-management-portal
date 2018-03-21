@@ -1,0 +1,51 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-4">
+                <div class="card card-profile">
+                    <div class="card-avatar">
+                        <a href="#pablo">
+                            <img class="img" src="assets/img/faces/marc.jpg" />
+                        </a>
+                    </div>
+
+                    <div class="content">
+                        <h6 class="category text-gray">{{employee.position.level}} {{employee.position.name}}</h6>
+                        <h4 class="card-title">{{employee.user.first_name}} {{employee.user.last_name}}</h4>
+                        <div class="card-footer">
+                            <div class="stats">
+                                Email : {{employee.email}}
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="stats">
+                                Phone Number : {{employee.phone_number}}
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="stats">
+                                Birthday : {{employee.birth_date}}
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="stats">
+                                Gender : {{getGenderValue(employee.gender)}}
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="stats">
+                                Race : {{getRaceValue(employee.race)}}
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+
+            </div>
+        </div>
+    </div>
+</div>
