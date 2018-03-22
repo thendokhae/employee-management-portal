@@ -4,15 +4,21 @@
       <div style="margin: auto; max-width: 1000px; margin-bottom: 50px;">
         <data-table id="persons-grid" headerTitle="Employees (Double click)" [items]="items" [itemCount]="itemCount" (reload)="reloadItems($event)"
           (rowClick)="rowClick($event)" (rowDoubleClick)="rowDoubleClick($event)" [rowTooltip]="rowTooltip">
-          <data-table-column [property]="first_name" [header]="'First Name'" [sortable]="true" [resizable]="true">
+          <data-table-column property="first_name" header="First Name" [sortable]="true" [resizable]="true">
           </data-table-column>
-          <data-table-column [property]="last_name" [header]="'Last Name'" [sortable]="true" [resizable]="true">
+          <data-table-column property="last_name" header="Last Name" [sortable]="true" [resizable]="true">
           </data-table-column>
-          <data-table-column property="phone_number" header="Phone Number" width="150px">
+          <data-table-column property="phone_number" header="Phone Number">
           </data-table-column>
-          <data-table-column [property]="job_title" [header]="'Job title'" [visible]="false">
+          <data-table-column property="job_title" header="Job title" [visible]="false" [sortable]="true">
           </data-table-column>
-          <data-table-column [property]="'active'" [header]="'Active'" [width]="100" [resizable]="true">
+          <data-table-column property="birth_date" header="Birth Date" [visible]="false" [sortable]="true">
+            </data-table-column>
+            <data-table-column property="age" header="Age" [visible]="false" [sortable]="true">
+            </data-table-column>
+            <data-table-column property="gender" header="Gender" [visible]="false" [sortable]="true">
+            </data-table-column>
+          <data-table-column property="active" header="Active" [width]="100" [resizable]="true">
             <template #dataTableHeader let-item="item">
               <span style="color: rgb(232, 0, 0)">Active</span>
             </template>

@@ -28,7 +28,8 @@ export class EmployeesListComponent implements OnInit {
       this.employeesList = employees;
       this.employeesList.forEach(employee =>{
         this.items.push({'first_name':employee.user.first_name,'last_name':employee.user.last_name, 'active':employee.user.is_active
-      ,'job_title':employee.position.name,'phone_number':employee.phone_number})
+      ,'job_title':employee.position.name,'phone_number':employee.phone_number, 'gender':employee.gender,
+        'birth_date':employee.birth_date, 'age':employee.age})
       })
       this.itemResource = new DataTableResource(this.items);
       this.itemResource.count().then(count => this.itemCount = count);
