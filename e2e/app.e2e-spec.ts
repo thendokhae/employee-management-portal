@@ -7,8 +7,25 @@ describe('em-portal App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display login screen', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    expect(page.getParagraphText()).toEqual('Login');
+  });
+
+  it('should display username input', () =>{
+    expect(page.getUsernameInputElement().getText()).toEqual('');
+  })
+
+  it('should display password input', () =>{
+    expect(page.getPasswordInputElement().getText()).toEqual('');
+  })
+
+  it('should display login button', () =>{
+    expect(page.getLoginButtnElement().getText()).toEqual('LOGIN');
+  })
+
+  it('should display dashboard screen', () => {
+    page.navigateToDashBoard();
+    expect(page.getDashboardText()).toEqual('Dashboard');
   });
 });
