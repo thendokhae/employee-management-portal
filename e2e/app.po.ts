@@ -5,8 +5,12 @@ export class AppPage {
     return browser.get('/');
   }
 
-  navigateToDashBoard(){
+  navigateToDashboard(){
     return browser.get('/dashboard');
+  }
+
+  getCurrentUrl(){
+    return browser.getCurrentUrl();
   }
 
   //get login screen header text
@@ -30,6 +34,6 @@ export class AppPage {
   }
 
   getDashboardText(){
-    return element(by.css('.nav-container')).getText();  
+    return element(by.css('Dashboard')).getText();  
   }
 }

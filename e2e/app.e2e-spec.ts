@@ -24,8 +24,22 @@ describe('em-portal App', () => {
     expect(page.getLoginButtnElement().getText()).toEqual('LOGIN');
   })
 
-  it('should display dashboard screen', () => {
-    page.navigateToDashBoard();
-    expect(page.getDashboardText()).toEqual('Dashboard');
+  it('should login', () => {
+    var usernameField = page.getUsernameInputElement();
+    var passwordField = page.getPasswordInputElement();
+    
+    //populate inputs
+    usernameField.sendKeys("pravin.gordhan");
+    passwordField.sendKeys("pravin.gordhan");
+
+    //ensure fields are updated
+    expect(usernameField.getAttribute('value')).toEqual("pravin.gordhan");
+    expect(passwordField.getAttribute('value')).toEqual("pravin.gordhan");
+
+    //click button to login
+    page.getLoginButtnElement().click().then(()=>{
+      page.navigateToDashboard()
+      expect(page.getDashboardText()).toEqual("Dashboard");
+    });
   });
 });
