@@ -36,4 +36,9 @@ export class AppPage {
   getDashboardText(){
     return element(by.css('Dashboard')).getText();  
   }
+
+  getBackEndersText(){
+    debugger
+    return element(by.cssContainingText('div', 'Back-enders')).$('p').getText();
+  }
 }

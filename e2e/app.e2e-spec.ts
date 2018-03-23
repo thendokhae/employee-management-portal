@@ -39,7 +39,7 @@ describe('em-portal App', () => {
     //click button to login
     page.getLoginButtnElement().click().then(()=>{
       page.navigateToDashboard()
-      expect(page.getDashboardText()).toEqual("Dashboard");
+      expect(page.getBackEndersText()).toEqual("Back-enders");
     });
   });
 });
